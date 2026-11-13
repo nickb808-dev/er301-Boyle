@@ -1,6 +1,6 @@
 # Boyle
 
-A clean stereo compressor for the ER-301, in the spirit of the WMD MSCL. It's
+A clean stereo compressor for the ER-301. It's
 meant for taming dynamic signals without adding colour: feedforward,
 stereo-linked, with a wide soft knee and every gain calculation done in dB.
 
@@ -10,7 +10,7 @@ Mnemonic **Bo**. Category **Essentials**, next to the stock Limiter.
 
 | Control | What it does | Range | Default |
 |---|---|---|---|
-| `comp` | The MSCL's one knob. It lowers the threshold by up to 24 dB, raises the ratio from 1:1 to ∞:1 (2:1 at 0.5, 4:1 at 0.75), and adds the makeup that keeps the loud parts at the same level | 0 – 1 | 0 |
+| `comp` | It lowers the threshold by up to 24 dB, raises the ratio from 1:1 to ∞:1 (2:1 at 0.5, 4:1 at 0.75), and adds the makeup that keeps the loud parts at the same level | 0 – 1 | 0 |
 | `att` | Attack time constant | 0.15 ms – 100 ms | 10 ms |
 | `rel` | Release time constant (the reduction falls linearly in dB) | 0.6 ms – 4 s | 150 ms |
 | `gain` | Output gain | ±36 dB | 0 dB |
@@ -26,7 +26,7 @@ settings are.
 | Option | Choices | What it does |
 |---|---|---|
 | Range | hot / **mid** / low | Where the threshold starts at comp 0: −6, −15 or −24 dBFS. A ±5 V signal peaks at about −6 dBFS. Use low for quiet sources |
-| Makeup | **inf** / 9dB / 3dB | Caps the comp knob's makeup gain (the MSCL's Limit switch). With 3 dB, turning comp up mostly lowers the peaks, so it behaves more like a peak limiter |
+| Makeup | **inf** / 9dB / 3dB | Caps the comp knob's makeup gain. With 3 dB, turning comp up mostly lowers the peaks, so it behaves more like a peak limiter |
 | Det HPF | off / **60Hz** / 120Hz | A high-pass filter on the detector only, so bass doesn't pump the whole mix. The audio itself isn't filtered |
 | Detect | **self** / key | What the detector listens to: the input itself, or the `key` branch, for ducking |
 
